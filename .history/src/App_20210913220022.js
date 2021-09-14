@@ -1,11 +1,10 @@
-import MyNavBar from './components/NavBar/NavBar.js';
+import logo from './logo.svg';
 import './App.css';
 
 function App() {
     return (
         <div className="App">
-        <header>
-            <MyNavBar/>
+        <header className="App-header">
         </header>
         </div>
     );

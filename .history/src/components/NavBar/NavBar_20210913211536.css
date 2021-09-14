@@ -1,0 +1,16 @@
+.inputSearch {
+    width: 500px;
+}
+
+.img-lupa {
+    width: 30px;
+    height: 30px;
+}
+
+.btn-lupa {
+    background-color: gold;
+}
+
+.btn-lupa:hover {
+    background-color: goldenrod;
+}

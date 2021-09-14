@@ -1,0 +1,22 @@
+.inputSearch {
+    width: 700px;
+}
+
+.img-lupa {
+    width: 30px;
+    height: 30px;
+}
+
+#navbarScrollingDropdown {
+    color: aliceblue;
+}
+
+.img-carro {
+    width: 30px;
+    height: 30px;
+}
+
+.nav-flex {
+    display: flex;
+    justify-content: space-evenly;
+}
