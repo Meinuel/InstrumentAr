@@ -4,9 +4,12 @@ import './App.css';
 function App() {
     return (
         <div className="App">
-        <header>
-            <MyNavBar/>
-        </header>
+            <header>
+                <MyNavBar/>
+            </header>
+            <body>
+                <Cards/>
+            </body>
         </div>
     );
 }
