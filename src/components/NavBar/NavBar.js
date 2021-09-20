@@ -5,12 +5,13 @@ import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import CartWidget from './CartWidget.js'
 const MyNavBar = () => {
     return (
         <Navbar bg="dark" variant="dark" className="nav-flex">
             <Navbar.Brand href="#home">InstrumentAr</Navbar.Brand>
             <Form className="d-flex">
-                <NavDropdown title="All" id="navbarScrollingDropdown">
+                <NavDropdown title="All" id="navbarScrollingDropdown" variant="light">
                     <NavDropdown.Item href="#Guitars">Guitars</NavDropdown.Item>
                     <NavDropdown.Item href="#Drums">Drums</NavDropdown.Item>
                     <NavDropdown.Item href="#Brass">Brass</NavDropdown.Item>    
@@ -21,9 +22,9 @@ const MyNavBar = () => {
                         className="inputSearch"
                         aria-label="Search"
                     />
-                    <Button variant="warning"><img className="img-lupa" src="https://image.flaticon.com/icons/png/512/64/64673.png" alt="lupa" /></Button>
+                    <Button variant="light"><img className="img-lupa" src="https://image.flaticon.com/icons/png/512/64/64673.png" alt="lupa" /></Button>
             </Form>
-            <a href="https://www.mercadolibre.com/"><img className="img-carro" src="https://latgchallenge.com/assets/images/logos_slider/cart.png" alt="dazos"/></a>
+            <CartWidget href = {"https://www.mercadolibre.com/"} className = {"img-carro"} src = {"https://latgchallenge.com/assets/images/logos_slider/cart.png"}/>
         </Navbar>
     );
 }

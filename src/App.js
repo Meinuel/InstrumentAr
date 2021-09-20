@@ -1,5 +1,5 @@
 import MyNavBar from './components/NavBar/NavBar.js';
-import Cards from './components/Cards/Cards.js';
+import ItemListContainer from './components/Cards/ItemListContainer.js';
 import './App.css';
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
             </header>
             <body className="main-body bg-black d-flex align-items-center justify-content-center">
                 <div>
-                    <Cards/>
+                    <ItemListContainer/>
                 </div>
             </body>
         </div>
