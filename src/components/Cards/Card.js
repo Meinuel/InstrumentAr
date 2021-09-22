@@ -1,6 +1,15 @@
+import React,{useState} from 'react';
 import './Card.css';
-import ItemCount from './ItemCount';
+
 const Card = (props) => {
+    const [cantidad, setCantidad] = useState(0)
+    const agregarCantidad = (operacion) => {
+        if(!operacion && cantidad === 0){
+
+        }else{
+            operacion ? setCantidad(cantidad + 1) : setCantidad(cantidad - 1);
+        }
+    }
     const {title,price,image} = props;
     return (
     <div className="card animate__animated animate__fadeInUp">
@@ -12,8 +21,12 @@ const Card = (props) => {
             <p>{price}
             </p> 
         </div>
-        <ItemCount/>
-        <button className="card-button">Agregar al carrito</button>
+        <div className="d-flex justify-content-evenly bg-light">
+            <button className="count-btn" onClick={() => agregarCantidad(false)}>-</button>
+            <div>{cantidad}</div>
+            <button className="count-btn" onClick={() => agregarCantidad(true)}>+</button>
+        </div>
+        <button className="card-btn">Agregar al carrito</button>
     </div>
     )
     }
