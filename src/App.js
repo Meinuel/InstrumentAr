@@ -8,7 +8,7 @@ function App() {
             <header>
                 <MyNavBar/>
             </header>
-            <body className="main-body bg-black d-flex align-items-center justify-content-center">
+            <body className="main-body d-flex align-items-center justify-content-center">
                 <div>
                     <ItemListContainer/>
                 </div>

@@ -1,17 +1,19 @@
 import Card from './Card';
-import imageSwamp from '../../assets/swamp.jpg';
-const text = 'Bienvenido a mi web!';
+import gibsonSG from '../../assets/sg.jpg';
+import stratocaster from '../../assets/strato.jpg';
+import lesPaul from '../../assets/lespaul.jpg'
+
 const cardObject = [
-    {title : 'Tarjeta 1' , greeting: text, image : imageSwamp},
-    {title : 'Tarjeta 2' , greeting : text, image : imageSwamp},
-    {title : 'Tarjeta 3' , greeting : text, image : imageSwamp}]
+    {title : 'Gibson SG' , price: '3000$', image : gibsonSG},
+    {title : 'Stratocaster' , price : '2000$', image : stratocaster},
+    {title : 'Tarjeta 3' , price : '3500$', image : lesPaul}]
 const ItemListContainer = () => {
     return (
         <div className="container">
             <div className="row">
             {
                 cardObject.map(
-                    ({ title, greeting, image }) => (<div className="col-md-4"><Card title={title} greeting={greeting} image={image} /></div>)
+                    ({ title, price, image }) => (<div className="col-md-4"><Card title={title} price={price} image={image} /></div>)
                 )
             }
             </div>
