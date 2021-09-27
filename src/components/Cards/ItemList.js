@@ -1,5 +1,5 @@
 import React,{useEffect,useState} from 'react'
-import Card from './Card';
+import Item from './Item';
 import gibsonSG from '../../assets/sg.jpg';
 import stratocaster from '../../assets/strato.jpg';
 import lesPaul from '../../assets/lespaul.jpg'
@@ -19,12 +19,12 @@ export default function ItemList(){
         getProducts.then((products)=>{
             setProducts(products)
         })
-    })
+    },[])
     return (
         <div className="row">
         {
             products.map(
-                ({ title, price, image }) => (<div className="col-md-4"><Card title={title} price={price} image={image} /></div>)
+                ({ title, price, image }) => (<div className="col-md-4"><Item title={title} price={price} image={image} /></div>)
             )
         }
         </div>
