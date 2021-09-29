@@ -1,9 +1,12 @@
 import ItemList from "./ItemList";
-const ItemListContainer = () => {
+export default function ItemListContainer (props){
+    const {query} = props
     return (
-        <div className="container">
-            <ItemList/>
-        </div>
+        <body className="main-body d-flex justify-content-center">
+            <div className="container">
+                <ItemList query={query}/>
+            </div>
+    </body>
+
     );
 }
-export default ItemListContainer;

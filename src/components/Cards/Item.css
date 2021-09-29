@@ -1,6 +1,5 @@
 .card-img-top {
-    height: 300px;
-    width: 300px;
+    overflow: hidden;
 }
 
 .card:hover {
@@ -17,4 +16,10 @@
     background-color: transparent;
     border: none;
     color: blue;
+}
+
+.card {
+    margin-top: 15px;
+    height: 450px;
+    width: 350px;
 }

@@ -1,7 +1,10 @@
 import React,{useState} from "react";
-export default function ItemCount (){
-    const [cantidad, setCantidad] = useState(0)
+
+export default function ItemCount (props){
+    const {stock,initValue} = props;
+    const [cantidad, setCantidad] = useState(initValue)
     const agregarCantidad = () => {
+        if(cantidad < stock)
         setCantidad(cantidad + 1) ;
         }
         
@@ -10,10 +13,14 @@ export default function ItemCount (){
         setCantidad(cantidad -1)
     }
     return (
-        <div className="d-flex justify-content-evenly bg-light">
-            <button className="count-btn" onClick={restarCantidad}>-</button>
-            <div>{cantidad}</div>
-            <button className="count-btn" onClick={agregarCantidad}>+</button>
+        <div>
+            <div className="d-flex justify-content-evenly bg-light">
+                <button className="count-btn" onClick={restarCantidad}>-</button>
+                <div>{cantidad}</div>
+                <button className="count-btn" onClick={agregarCantidad}>+</button>
+            </div>
+            <button className="card-btn">Agregar al carrito</button>
         </div>
+
     )
 }

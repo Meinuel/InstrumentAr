@@ -1,4 +1,7 @@
 .main-body {
     height: 100vh;
+}
+
+body {
     background-color: antiquewhite;
 }

@@ -1,30 +1,23 @@
-import React,{useEffect,useState} from 'react'
+import React, {useState,useEffect} from 'react'
 import Item from './Item';
-import gibsonSG from '../../assets/sg.jpg';
-import stratocaster from '../../assets/strato.jpg';
-import lesPaul from '../../assets/lespaul.jpg'
+import './ItemList.css'
 
-export default function ItemList(){
+export default function ItemList(props){
+    const API_URL = 'https://api.mercadolibre.com/sites/MLA'
+    const {query} = props
     const [products,setProducts] = useState([]) 
-    const getProducts = new Promise((resolve,reject) => {
-        setTimeout(() => {
-            const productos = [
-                {title : 'Gibson SG' , price: '3000$', image : gibsonSG},
-                {title : 'Stratocaster' , price : '2000$', image : stratocaster},
-                {title : 'Les Paul' , price : '3500$', image : lesPaul}]
-                resolve(productos)
-        }, 1000)
-    })
     useEffect(()=>{
-        getProducts.then((products)=>{
-            setProducts(products)
-        })
-    },[])
+        console.log(`${API_URL}/search?q=${query}`)
+        fetch(`${API_URL}/search?q=${query}`)
+            .then((res) => res.json())
+                .then((json) => setProducts(json['results']))
+                    .catch((err) => {console.log(err.toString())})
+    },[]);
     return (
         <div className="row">
-        {
+        {products === null ? <p>Espere...</p> :
             products.map(
-                ({ title, price, image }) => (<div className="col-md-4"><Item title={title} price={price} image={image} /></div>)
+                ({ title, price, available_quantity, thumbnail, id }) => (<div className="col-md-4 item-list"><Item id={id} title={title} price={price} stock={available_quantity} image={thumbnail} /></div>)
             )
         }
         </div>
