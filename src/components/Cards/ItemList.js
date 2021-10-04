@@ -12,12 +12,12 @@ export default function ItemList(props){
             .then((res) => res.json())
                 .then((json) => setProducts(json['results']))
                     .catch((err) => {console.log(err.toString())})
-    },[]);
+    },[query]);
     return (
         <div className="row">
-        {products === null ? <p>Espere...</p> :
+        { products.lenght === 0 ? <p>Espere...</p> :
             products.map(
-                ({ title, price, available_quantity, thumbnail, id }) => (<div className="col-md-4 item-list"><Item id={id} title={title} price={price} stock={available_quantity} image={thumbnail} /></div>)
+                ({ title, price, available_quantity, thumbnail, id }) => (<div className="col-md-4 itemList"><Item id={id} title={title} price={price} stock={available_quantity} image={thumbnail} /></div>)
             )
         }
         </div>

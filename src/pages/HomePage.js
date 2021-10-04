@@ -1,6 +1,7 @@
-import MyNavBar from "../components/NavBar/NavBar";
-import Button from 'react-bootstrap/Button';
-import { Link } from "react-router-dom";
+import Button from 'react-bootstrap/Button'
+import { Link } from "react-router-dom"
+import styles from './HomePage.module.css'
+
 export default function HomePage(){
     const navOptions = [
         {title : 'Guitars' , query : 'GuitarrasElectricasGibson'},
@@ -8,17 +9,14 @@ export default function HomePage(){
         {title : 'Drums' , query : 'BateriaMaped'},
         {title : 'Brass' , query : 'Saxo'}]
     return (
-        <div>
-            <MyNavBar/>
-                <div className="home-container">
-                    <ul className="nav-pages">
-                    {
-                            navOptions.map(({title,query}) => (
-                                <li><Link to={`/product/${query}`}><Button variant="light" size="lg" className="btn">{title}</Button></Link></li>
-                            ))
-                        }
-                    </ul>
-                </div>
+        <div className={styles.homeContainer}>
+            <ul className={styles.homePages}>
+            {
+                    navOptions.map(({title,query}) => (
+                        <li><Link to={`/product/${query}`}><Button variant="light" size="lg" className={styles.btn}>{title}</Button></Link></li>
+                    ))
+                }
+            </ul>
         </div>
     )
 }

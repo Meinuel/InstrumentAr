@@ -1,0 +1,43 @@
+.imgCarro {
+    width: 30px;
+    height: 30px;
+}
+
+.navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 20px;
+    background-color: black;
+    height: 8vh;
+}
+
+.navPagesContainer {
+    width: 60%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+}
+
+.navPages {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.brand {
+    color: white;
+}
+
+li {
+    list-style: none;
+}
+
+p {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}

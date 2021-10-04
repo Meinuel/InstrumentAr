@@ -1,4 +1,5 @@
 import React,{useState} from "react";
+import styles from './ItemCount.module.css'
 
 export default function ItemCount (props){
     const {stock,initValue} = props;
@@ -15,11 +16,11 @@ export default function ItemCount (props){
     return (
         <div>
             <div className="d-flex justify-content-evenly bg-light">
-                <button className="count-btn" onClick={restarCantidad}>-</button>
+                <button className={styles.counter} onClick={restarCantidad}>-</button>
                 <div>{cantidad}</div>
-                <button className="count-btn" onClick={agregarCantidad}>+</button>
+                <button className={styles.counter} onClick={agregarCantidad}>+</button>
             </div>
-            <button className="card-btn">Agregar al carrito</button>
+            <button>Agregar al carrito</button>
         </div>
 
     )

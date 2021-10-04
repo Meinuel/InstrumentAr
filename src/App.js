@@ -1,9 +1,9 @@
 import AppRouter from './AppRouter/AppRouter.js';
-import './App.css';
+import styles from './App.module.css';
 
 function App() {
     return (
-        <body className="text-center">
+        <body className={styles.body}>
             <AppRouter/>
         </body>
     );

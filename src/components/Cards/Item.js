@@ -4,7 +4,7 @@ import './Item.css';
 
 export default function Item (props) {
 
-    const {id,title,price,stock,image} = props;
+    const {id,title,image} = props;
     return (
     <div className="card animate__animated animate__fadeInUp">
         <div className="overflow-hidden">
