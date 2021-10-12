@@ -1,0 +1,101 @@
+%container {
+    display: flex;
+    justify-content: space-between;
+    opacity: 1;
+    width: 25%;
+    transition: all .2s ease-in-out;
+    overflow: hidden;
+    border-radius: 5px;
+    margin-inline: 5px;
+    margin-block: 6%;
+    box-shadow: 1px 1px 1px 1px black;
+    h3 {
+        color: black;
+        margin-left: 10px;
+    }
+    .img-opacity {
+        opacity: 0.9;
+    }
+    &:hover {
+        width: 100%;
+    }
+}
+
+%brand {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .img-resize {
+        height: 50%;
+        width: 50%;
+    }
+}
+
+.container-guitars {
+    background-color: rgb(255, 93, 93);
+    @extend %container;
+    img {
+        width: 470px;
+        height: 410px;
+    }
+    a {
+        @extend %brand;
+        &:hover {
+            background-color: rgb(250, 66, 66);
+        }
+    }
+}
+
+.container-basses {
+    background-color: rgb(231, 196, 119);
+    @extend %container;
+    img {
+        height: 410px;
+    }
+    a {
+        @extend %brand;
+        &:hover {
+            background-color: rgb(194, 164, 99);
+        }
+    }
+}
+
+.container-drums {
+    background-color: plum;
+    @extend %container;
+    img {
+        height: 410px;
+    }
+    a {
+        @extend %brand;
+        &:hover {
+            background-color: rgb(191, 134, 191);
+        }
+    }
+}
+
+.container-brasses {
+    background-color: rgb(2, 194, 159);
+    @extend %container;
+    img {
+        transform: scaleX(-1);
+        height: 410px;
+        width: 390px;
+    }
+    a {
+        @extend %brand;
+        img {
+            transform: scaleX(1);
+        }
+        &:hover {
+            background-color: rgb(3, 160, 132);
+        }
+    }
+}
+
+.container-brands {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}

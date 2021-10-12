@@ -10,6 +10,6 @@ export default function ItemDetailContainer(props){
     },[])
 
     return(
-            <ItemDetail productData={productData}/>
+        <ItemDetail productData={productData}/>
     )
 }

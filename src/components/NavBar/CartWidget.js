@@ -1,8 +1,9 @@
-import { FaBeer } from 'react-icons/fa';
-const CartWidget = (props) => {
-    const {href,className,src} = props;
+import CartIcon from '../../assets/cart.svg'
+
+const CartWidget = () => {
+
     return (
-        <a href={href}><img className={className} src={src} alt="dazos"/></a>
+        <a href="https://www.mercadolibre.com/"><img className="img-carro" src={CartIcon} alt="dazos"/></a>
     )
 }
 

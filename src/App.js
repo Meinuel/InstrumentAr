@@ -1,11 +1,12 @@
 import AppRouter from './AppRouter/AppRouter.js';
-import styles from './App.module.css';
+import { CartProvider } from './context/CartContext.js';
+import './css/style.css'
 
 function App() {
     return (
-        <body className={styles.body}>
+        <CartProvider>
             <AppRouter/>
-        </body>
+        </CartProvider>
     );
 }
 

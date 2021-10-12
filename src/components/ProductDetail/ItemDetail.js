@@ -1,25 +1,34 @@
-import {useState} from 'react'
+import {useState,useContext} from 'react'
 import {Link} from 'react-router-dom'
 import ItemCount from '../ItemCount/ItemCount'
-import styles from './ItemDetail.module.css'
+import '../../css/style.css'
 import Button from 'react-bootstrap/Button'
+import CartContext from '../../context/CartContext'
+
 export default function ItemDetail(props){
-    const [quantity,setQuantity] = useState(0)
+
+    const [quantity,setQuantity] = useState(1)
+
+    const {cartProducts,addCartProduct} = useContext(CartContext)
+
     const {productData} = props
+
     const onAdd = () => {
         quantity < productData['available_quantity'] && setQuantity(quantity + 1)
     }
+
     const onRemove = () => {
-        quantity > 0 && setQuantity(quantity - 1)
+        quantity > 1 && setQuantity(quantity - 1)
     }
+
     return(
         <div className="d-flex flex-column align-items-center">
-            <img src={productData['thumbnail']} alt="product img" className={styles.itemImg}/>
+            <img src={productData['thumbnail']} alt="product img" className="item-img"/>
             <div>{productData['title']}</div>
             <div>Stock : {productData['available_quantity']}</div>
             <div>Precio : {productData['price']}$</div>
             <ItemCount quantity={quantity} onAdd={onAdd} onRemove={onRemove}/>
-            <Link to="/cart"><Button variant="primary">Agregar al carrito</Button></Link>
+            <Button onClick={() => addCartProduct({id:productData['id'],name:productData['title'], price:productData['price'], quantity:quantity})} variant="primary">Agregar al carrito</Button>
         </div>
     )
 }

@@ -1,0 +1,188 @@
+* {
+  list-style: none;
+}
+
+.nav-container, .nav-scrolled {
+  display: flex;
+  width: 100%;
+  height: 8%;
+  justify-content: space-between;
+  transition: all 0.3s ease-in-out;
+  align-items: center;
+  padding-inline: 20px;
+  position: fixed;
+  box-shadow: 0 10px 10px -9px;
+  z-index: 5;
+}
+
+.nav-container .img-carro, .nav-scrolled .img-carro {
+  width: 30px;
+  height: 30px;
+}
+
+.nav-scrolled {
+  background-color: black;
+}
+.nav-scrolled a {
+  text-decoration: none;
+  color: white;
+}
+.nav-scrolled a:hover {
+  color: white;
+}
+.nav-container {
+  background-color: #2aa9f8;
+  border-top: 2px solid black;
+}
+.nav-container a {
+  text-decoration: none;
+  color: white;
+}
+.nav-container a:hover {
+  color: black;
+}
+.nav-pages-container {
+  width: 60%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-pages {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.home {
+  background-color: #fdfdfd;
+  height: 100vh;
+}
+
+.container-brasses, .container-drums, .container-basses, .container-guitars {
+  display: flex;
+  justify-content: space-between;
+  opacity: 1;
+  width: 25%;
+  transition: all 0.2s ease-in-out;
+  overflow: hidden;
+  border-radius: 5px;
+  margin-inline: 5px;
+  margin-block: 6%;
+  box-shadow: 1px 1px 1px 1px black;
+}
+.container-brasses h3, .container-drums h3, .container-basses h3, .container-guitars h3 {
+  color: black;
+  margin-left: 10px;
+}
+.container-brasses .img-opacity, .container-drums .img-opacity, .container-basses .img-opacity, .container-guitars .img-opacity {
+  opacity: 0.9;
+}
+.container-brasses:hover, .container-drums:hover, .container-basses:hover, .container-guitars:hover {
+  width: 100%;
+}
+
+.container-brasses a, .container-drums a, .container-basses a, .container-guitars a {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-brasses a .img-resize, .container-drums a .img-resize, .container-basses a .img-resize, .container-guitars a .img-resize {
+  height: 50%;
+  width: 50%;
+}
+
+.container-guitars {
+  background-color: #ff5d5d;
+}
+.container-guitars img {
+  width: 470px;
+  height: 410px;
+}
+.container-guitars a:hover {
+  background-color: #fa4242;
+}
+
+.container-basses {
+  background-color: #e7c477;
+}
+.container-basses img {
+  height: 410px;
+}
+.container-basses a:hover {
+  background-color: #c2a463;
+}
+
+.container-drums {
+  background-color: plum;
+}
+.container-drums img {
+  height: 410px;
+}
+.container-drums a:hover {
+  background-color: #bf86bf;
+}
+
+.container-brasses {
+  background-color: #02c29f;
+}
+.container-brasses img {
+  transform: scaleX(-1);
+  height: 410px;
+  width: 390px;
+}
+.container-brasses a img {
+  transform: scaleX(1);
+}
+.container-brasses a:hover {
+  background-color: #03a084;
+}
+
+.container-brands {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item-img {
+  height: 200px;
+  width: 200px;
+}
+
+.item-list {
+  margin-top: 40px;
+}
+
+.card-img-top {
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: scale(1.8);
+  transition: all 0.5s ease-in-out;
+}
+
+.card {
+  margin-top: 15px;
+  height: 450px;
+  width: 350px;
+}
+
+.counter {
+  background-color: transparent;
+  border: none;
+  color: blue;
+}
+
+.container-swiper {
+  height: 25vh;
+  background-color: blue;
+}
+
+.container-item {
+  transition: all 0.2s ease-in-out;
+}
+
+/*# sourceMappingURL=style.css.map */
