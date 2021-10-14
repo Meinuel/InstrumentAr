@@ -21,7 +21,7 @@ export default function MyNavBar () {
     return (          
         <header>
             <nav className={isScroll ? 'nav-scrolled' : 'nav-container'}>
-                <Link to='/'><h5>InstrumentAr</h5></Link>
+                <Link to='/'><h4>InstrumentAr</h4></Link>
                 <div className="nav-pages-container">
                     <ul className="nav-pages">
                         <li><Link to={`/product/GuitarrasElectricasGibson`}>Guitars</Link></li>

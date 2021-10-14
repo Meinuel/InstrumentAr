@@ -3,12 +3,12 @@
 }
 
 .card:hover {
-    transform: scale(1.8);
-    transition: all 0.5s ease-in-out;
+    border: 1px solid black;
 }
 
 .card {
-    margin-top: 15px;
+    margin: auto;
+    margin-bottom: 10px;
     height: 450px;
-    width: 350px;
+    width: 75%;
 }

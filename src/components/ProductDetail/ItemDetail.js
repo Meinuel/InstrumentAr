@@ -1,15 +1,14 @@
 import {useState,useContext} from 'react'
-import {Link} from 'react-router-dom'
 import ItemCount from '../ItemCount/ItemCount'
 import '../../css/style.css'
 import Button from 'react-bootstrap/Button'
-import CartContext from '../../context/CartContext'
+import {CartContext} from '../../context/CartContext'
 
 export default function ItemDetail(props){
 
     const [quantity,setQuantity] = useState(1)
 
-    const {cartProducts,addCartProduct} = useContext(CartContext)
+    const {addCartProduct} = useContext(CartContext)
 
     const {productData} = props
 
@@ -28,7 +27,7 @@ export default function ItemDetail(props){
             <div>Stock : {productData['available_quantity']}</div>
             <div>Precio : {productData['price']}$</div>
             <ItemCount quantity={quantity} onAdd={onAdd} onRemove={onRemove}/>
-            <Button onClick={() => addCartProduct({id:productData['id'],name:productData['title'], price:productData['price'], quantity:quantity})} variant="primary">Agregar al carrito</Button>
+            <Button onClick={() => addCartProduct({id:productData['id'],name:productData['title'], price:productData['price'], quantity:quantity})} variant="primary">Terminar mi compra</Button>
         </div>
     )
 }

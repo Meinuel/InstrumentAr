@@ -1,10 +1,10 @@
-import React,{useState} from 'react';
 import { Link } from 'react-router-dom';
 import '../../css/style.css';
 
 export default function Item (props) {
 
     const {id,title,image} = props;
+    
     return (
     <div className="card animate__animated animate__fadeInUp">
         <div className="overflow-hidden">

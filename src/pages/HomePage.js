@@ -1,8 +1,7 @@
-import CategoriesListContainer from '../components/Brand/CategoriesListContainer'
+import CategoriesListContainer from '../components/Categories/CategoriesListContainer'
 import MyNavBar from '../components/NavBar/NavBar'
-import ItemListContainer from '../components/Cards/ItemListContainer'
 import '../css/style.css'
-import Swiper from '../components/Swiper'
+import CarouselContainer from '../components/Carousel/CarouselContainer'
 
 export default function HomePage(){
 
@@ -10,8 +9,7 @@ export default function HomePage(){
             <div className="home">
                 <MyNavBar/>
                 <CategoriesListContainer/>
-                <ItemListContainer query={'ukelele'}/>
-                {/* <Swiper/> */}
+                <CarouselContainer/>
             </div>
     )
 }

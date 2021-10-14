@@ -9,7 +9,6 @@ const CartProvider = ({children})=>{
     const addCartProduct = (product) => {
         if(cartProducts.length === 0){
             setCartProducts([product])
-            console.log('Hola')
         }else{
             let isDuplicate = false
             for (const key in cartProducts) {
@@ -23,9 +22,19 @@ const CartProvider = ({children})=>{
         }
     }
 
+    const removeCartProduct = (i) => {
+        setCartProducts(cartProducts.filter(item =>
+            cartProducts.indexOf(item) !== i && item))
+    }
+
+    const clearCartProducts = () => {
+        setCartProducts([])
+    }
     const data = {
         cartProducts,
-        addCartProduct
+        addCartProduct,
+        clearCartProducts,
+        removeCartProduct
     }
 
     return(
@@ -34,5 +43,4 @@ const CartProvider = ({children})=>{
         </CartContext.Provider>
     ) 
 }
-export { CartProvider };
-export default CartContext;
+export { CartProvider, CartContext };
