@@ -8,13 +8,8 @@ export default function CartDetail(){
     
     const {cartProducts,clearCartProducts,removeCartProduct} = useContext(CartContext)
 
-    const calculateTotal = products => { 
-        let precio = 0
-        for (let index = 0; index < products.length; index++) {
-            const element = products[index].price;
-            precio = precio + element
-        }
-        return precio}
+    const calculateTotal = products => products.reduce((prev, acc) => prev + acc.price, 0)
+    
     return(
         <div className="container-cart-page">
             {cartProducts.length > 0 ? 

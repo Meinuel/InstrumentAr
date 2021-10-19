@@ -3,12 +3,12 @@ import '../../css/style.css';
 
 export default function Item (props) {
 
-    const {id,title,image} = props;
+    const {title,img,id} = props;
     
     return (
     <div className="card animate__animated animate__fadeInUp">
         <div className="overflow-hidden">
-            <img className="card-img-top" src={image} alt="" />
+            <img className="card-img-top" src={img} alt="" />
         </div>
         <div className="card-body text-dark">
             <h5>{title}</h5>

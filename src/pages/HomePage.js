@@ -10,6 +10,7 @@ export default function HomePage(){
                 <MyNavBar/>
                 <CategoriesListContainer/>
                 <CarouselContainer/>
+                
             </div>
     )
 }

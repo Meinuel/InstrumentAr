@@ -5,7 +5,7 @@
 .nav-container, .nav-scrolled {
   display: flex;
   width: 100%;
-  height: 6%;
+  height: 50px;
   justify-content: space-between;
   transition: all 0.3s ease-in-out;
   align-items: center;
@@ -15,6 +15,7 @@
   position: fixed;
   box-shadow: 0 10px 10px -9px;
   z-index: 5;
+  color: white;
 }
 .nav-container a, .nav-scrolled a {
   text-shadow: 1px 1px 2px black;
@@ -27,8 +28,10 @@
 }
 
 .nav-container .img-carro, .nav-scrolled .img-carro {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  margin-top: 2px;
 }
 
 .nav-scrolled {
@@ -65,7 +68,7 @@
   overflow: hidden;
   border-radius: 5px;
   margin-inline: 5px;
-  margin-block: 65px 30px;
+  margin-block: 70px;
   box-shadow: 1px 1px 1px 1px #404548;
 }
 .container-brasses h3, .container-drums h3, .container-basses h3, .container-guitars h3 {
@@ -196,8 +199,11 @@
 }
 
 .carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #404548;
-  height: 25vh;
+  height: 150px;
 }
 
 .container-cart-page {
