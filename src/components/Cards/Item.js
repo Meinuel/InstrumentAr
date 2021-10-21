@@ -3,7 +3,7 @@ import '../../css/style.css';
 
 export default function Item (props) {
 
-    const {title,img,id} = props;
+    const {title,img,id,brandTitle} = props;
     
     return (
     <div className="card animate__animated animate__fadeInUp">
@@ -12,7 +12,7 @@ export default function Item (props) {
         </div>
         <div className="card-body text-dark">
             <h5>{title}</h5>
-            <Link to={`/productDetail/${id}`}><button variant="dark">Ver Producto</button></Link>   
+            <Link to={`/productDetail/${id}/${brandTitle}`}><button variant="dark">Ver Producto</button></Link>   
         </div>
     </div>
     )

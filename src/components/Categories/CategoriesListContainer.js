@@ -23,15 +23,15 @@ import '../../css/style.css'
 export default function CategoriesListContainer(){
 
     const categories = [
-        {title:'Guitars',style:'container-guitars',img:GuitarImg,brands:[{id:1,title:'Gibson',img:GibsonImg, query:'Guitarras-Gibson'},{id:2,title:'Fender',img:FenderImg,query:'Guitarras-Fender'},{id:3,title:'Jackson',img:JacksonImg,query:'Guitarras-Jackson'},{id:4,title:'Epiphone',img:EpihponeImg,query:'Guitarras-Epiphone'}]},
-        {title:'Drums',style:'container-drums',img:DrumImg,brands:[{id:1,title:'Mapex',img:MapexImg, query:'BateriaMapex'},{id:2,title:'Tama',img:TamaImg, query:'BateriaTama'},{id:3,title:'Gretsch',img:GretschImg, query:'BateriaGretsch'},{id:4,title:'Sonor',img:SonorImg, query:'BateriaSonor'}]},
-        {title:'Basses',style:'container-basses',img:BassImg,brands:[{id:1,title:'MusicMan',img:MusicManImg, query:'BajoMusicMan'},{id:2,title:'Fender',img:FenderImg, query:'BajoFender'},{id:3,title:'Warwick',img:WarwickImg, query:'BajoWarwick'},{id:4,title:'Samick',img:SamickImg, query:'BajoSamick'}]},
-        {title:'Saxes',style:'container-brasses',img:SaxImg,brands:[{id:1,title:'Coda',img:CodaImg, query:'SaxoCoda'},{id:2,title:'Keilwerth',img:KeilwerthImg, query:'SaxoKeilwerth'},{id:3,title:'Yanagisawa',img:YanagisawaImg, query:'SaxoYanagisawa'},{id:4,title:'Yamaha',img:YamahaImg, query:'SaxoYamaha'}]}]
+        {categorieTitle:'Guitars',style:'container-guitars',img:GuitarImg,brands:[{id:1,brandTitle:'products',img:GibsonImg},{id:2,brandTitle:'fender',img:FenderImg},{id:3,brandTitle:'Jackson',img:JacksonImg},{id:4,brandTitle:'Epiphone',img:EpihponeImg}]},
+        {categorieTitle:'Drums',style:'container-drums',img:DrumImg,brands:[{id:1,brandTitle:'Mapex',img:MapexImg},{id:2,brandTitle:'Tama',img:TamaImg},{id:3,brandTitle:'Gretsch',img:GretschImg},{id:4,brandTitle:'Sonor',img:SonorImg}]},
+        {categorieTitle:'Basses',style:'container-basses',img:BassImg,brands:[{id:1,brandTitle:'MusicMan',img:MusicManImg},{id:2,brandTitle:'Fender',img:FenderImg},{id:3,brandTitle:'Warwick',img:WarwickImg},{id:4,brandTitle:'Samick',img:SamickImg}]},
+        {categorieTitle:'Saxes',style:'container-brasses',img:SaxImg,brands:[{id:1,brandTitle:'Coda',img:CodaImg},{id:2,brandTitle:'Keilwerth',img:KeilwerthImg},{id:3,brandTitle:'Yanagisawa',img:YanagisawaImg},{id:4,brandTitle:'Yamaha',img:YamahaImg}]}]
 
     return(
         <div className="d-flex">
-            {categories.map(({title,style,img,brands}) => (
-                <Categories title={title} style={style} img={img} brands={brands}/>
+            {categories.map(({categorieTitle,style,img,brands}) => (
+                <Categories categorieTitle={categorieTitle} style={style} img={img} brands={brands}/>
             ))}
         </div>
     )

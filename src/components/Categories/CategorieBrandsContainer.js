@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import '../../css/style.css'
 import Brand from './Brand'
 
@@ -7,7 +6,7 @@ const {brands} = props
 return(
     <div className="container-brands">
         {
-            brands.map(({title,img}) => (<Brand img={img} title={title}/>))
+            brands.map(({brandTitle,img}) => (<Brand img={img} brandTitle={brandTitle}/>))
         }
     </div>
 )

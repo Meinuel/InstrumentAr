@@ -6,12 +6,13 @@ import Item from './Item';
 import '../../css/style.css';
 
 export default function ItemList(props) {
-    const API_URL = 'https://api.mercadolibre.com/sites/MLA'
-    const { query } = props
+
+    const { brandTitle } = props
     const [products, setProducts] = useState([])
 
     async function getProducts(db) {
-        const productsCol = collection(db, 'products')
+        console.log(brandTitle)
+        const productsCol = collection(db, brandTitle)
         const productsSnapshot = await getDocs(productsCol)
         const products = productsSnapshot.docs.map(doc => doc.data())
         console.log(products)
@@ -20,13 +21,13 @@ export default function ItemList(props) {
 
     useEffect(() => {
         getProducts(db)
-    }, [query]);
+    }, [brandTitle]);
 
     return ( <div className = "row" > {
             products.length === 0 ? <Spinner className = "m-auto" animation = "grow"/> : products.map(
-                ({ title, price, stock, img }) => ( 
+                ({ title, img, id }) => ( 
                 <div className = "col-md-4" > 
-                    <Item title={title} price={price} stock={stock} img={img}/>
+                    <Item title={title} img={img} id={id} brandTitle={brandTitle}/>
                 </div> )
             )
         } </div>

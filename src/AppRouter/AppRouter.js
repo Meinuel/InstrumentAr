@@ -9,8 +9,8 @@ export default function AppRouter () {
         <BrowserRouter>
         <Switch>
             <Route exact path="/" component={HomePage}/>
-            <Route path="/product/:query" component={ProductPage}/>
-            <Route path="/productDetail/:productId" component={ProductDetailPage}/>
+            <Route path="/product/:brandTitle" component={ProductPage}/>
+            <Route path="/productDetail/:productId/:brandTitle" component={ProductDetailPage}/>
             <Route path="/cart" component={CartPage}/>
             <Route path="*" component={NotFoundPage}/>
         </Switch>

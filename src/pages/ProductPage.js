@@ -3,12 +3,12 @@ import { useParams } from "react-router";
 import MyNavBar from "../components/NavBar/NavBar";
 
 export default function ProductPage(){
-    const {query} = useParams();
+    const {brandTitle} = useParams();
     return (
         <div>
             <MyNavBar/>
             {/* <BrandContainer/> */}
-            <ItemListContainer query={query}/>
+            <ItemListContainer brandTitle={brandTitle}/>
         </div>
     )
 }
