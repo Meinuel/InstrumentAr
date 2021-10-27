@@ -2,7 +2,7 @@
   list-style: none;
 }
 
-.nav-container, .nav-scrolled {
+.nav-container-saxes, .nav-container-basses, .nav-container-drums, .nav-container-guitars, .nav-container, .nav-scrolled {
   display: flex;
   width: 100%;
   height: 50px;
@@ -11,20 +11,18 @@
   align-items: center;
   padding-inline: 20px;
   border-top: 2px solid #404548;
-  border-radius: 0px 0px 10px 10px;
   position: fixed;
-  box-shadow: 0 10px 10px -9px;
+  box-shadow: 0 10px 10px -9px black;
   z-index: 5;
   color: white;
 }
-.nav-container a, .nav-scrolled a {
+.nav-container-saxes .nav-btn-a, .nav-container-basses .nav-btn-a, .nav-container-drums .nav-btn-a, .nav-container-guitars .nav-btn-a, .nav-container .nav-btn-a, .nav-scrolled .nav-btn-a {
   text-shadow: 1px 1px 2px black;
   font-weight: 600;
+  color: white;
+  border: none;
+  background-color: transparent;
   text-decoration: none;
-  color: white;
-}
-.nav-container a:hover, .nav-scrolled a:hover {
-  color: white;
 }
 
 .nav-container .img-carro, .nav-scrolled .img-carro {
@@ -40,6 +38,54 @@
 .nav-container {
   background-color: #268dcc;
 }
+.nav-container-guitars {
+  background-color: #ff5d5d;
+}
+@keyframes backgroundColorAnimation {
+  from {
+    background-color: #268dcc;
+  }
+  to {
+    background-color: #ff5d5d;
+  }
+}
+
+.nav-container-drums {
+  background-color: #ca87ca;
+}
+@keyframes backgroundColorAnimation {
+  from {
+    background-color: #268dcc;
+  }
+  to {
+    background-color: #ca87ca;
+  }
+}
+
+.nav-container-basses {
+  background-color: #d6b468;
+}
+@keyframes backgroundColorAnimation {
+  from {
+    background-color: #268dcc;
+  }
+  to {
+    background-color: #d6b468;
+  }
+}
+
+.nav-container-saxes {
+  background-color: #02c29f;
+}
+@keyframes backgroundColorAnimation {
+  from {
+    background-color: #268dcc;
+  }
+  to {
+    background-color: #02c29f;
+  }
+}
+
 .nav-pages-container {
   width: 60%;
   height: 80%;
@@ -54,6 +100,18 @@
   justify-content: space-evenly;
 }
 
+.btn-nav {
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+
+.active-brand-container {
+  background-color: #797979;
+  border-radius: 5px;
+}
+
+/* The element to apply the animation to */
 .home {
   background-color: #ece8e8;
   height: 100vh;
@@ -99,7 +157,7 @@
 }
 .container-guitars img {
   width: 470px;
-  height: 410px;
+  height: 390px;
 }
 .container-guitars a:hover {
   background-color: #fa4242;
@@ -109,7 +167,7 @@
   background-color: #d6b468;
 }
 .container-basses img {
-  height: 410px;
+  height: 390px;
 }
 .container-basses a:hover {
   background-color: #c2a463;
@@ -119,7 +177,7 @@
   background-color: #ca87ca;
 }
 .container-drums img {
-  height: 410px;
+  height: 390px;
 }
 .container-drums a:hover {
   background-color: #bf86bf;
@@ -130,7 +188,7 @@
 }
 .container-brasses img {
   transform: scaleX(-1);
-  height: 410px;
+  height: 390px;
   width: 390px;
 }
 .container-brasses a img {
@@ -153,8 +211,26 @@
 }
 
 .item-img {
-  height: 200px;
-  width: 200px;
+  height: 30%;
+  width: 30%;
+  margin-right: 50px;
+}
+
+.data-product-container {
+  margin-left: 50px;
+}
+
+.btn-cart {
+  background-color: #268dcc;
+  color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-top: 15px;
+  width: 20vw;
+  height: 35px;
+}
+.btn-cart:hover {
+  background-color: #37a5e9;
 }
 
 .card-img-top {
@@ -166,20 +242,38 @@
 }
 
 .card {
-  margin: auto;
   margin-bottom: 10px;
-  height: 450px;
+  height: 400px;
   width: 75%;
+  background-color: rebeccapurple;
 }
 
 .item-list-container {
-  margin-top: 0px;
+  margin-top: 70px;
+}
+
+.brand-logo {
+  height: 10%;
+  width: 10%;
+}
+
+.item-count-container {
+  width: 25vw;
+  margin-top: 15px;
 }
 
 .counter {
   background-color: transparent;
-  border: none;
-  color: blue;
+  color: #2278ae;
+  border: 2px solid #268dcc;
+  font-weight: 700;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+}
+.counter:hover {
+  background-color: #268dcc;
+  color: white;
 }
 
 .container-swiper {
@@ -202,16 +296,31 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #404548;
+  background-color: transparent;
   height: 150px;
 }
 
-.container-cart-page {
-  height: 100vh;
+.cart-products-container, .cart-page-container {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
+}
+
+.cart-page-container {
+  height: 100vh;
+}
+
+.cart-products-container {
+  height: 50vh;
+  flex-direction: column;
+}
+
+.btn-margin {
+  margin: 15px;
+}
+
+.item-detail-container {
+  height: 100vh;
 }
 
 h5 {

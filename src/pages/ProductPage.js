@@ -6,7 +6,7 @@ export default function ProductPage(){
     const {brandTitle} = useParams();
     return (
         <div>
-            <MyNavBar/>
+            <MyNavBar isHome={false}/>
             {/* <BrandContainer/> */}
             <ItemListContainer brandTitle={brandTitle}/>
         </div>

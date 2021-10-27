@@ -5,10 +5,10 @@ export default function ItemCount (props){
 
     return (
         <div>
-            <div className="d-flex justify-content-evenly bg-light">
-                <button className="counter" onClick={onRemove}>-</button>
+            <div className="d-flex justify-content-between item-count-container">
+                <button className="d-flex justify-content-center align-items-center counter" onClick={onRemove}>-</button>
                 <div>{quantity}</div>
-                <button className="counter" onClick={onAdd}>+</button>
+                <button className="d-flex justify-content-center align-items-center counter" onClick={onAdd}>+</button>
             </div>
         </div>
 

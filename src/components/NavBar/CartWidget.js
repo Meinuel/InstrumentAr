@@ -11,7 +11,7 @@ const {cartProducts} = useContext(CartContext)
 
     return (
         <div className="d-flex">
-            <Link to="/cart"><FontAwesomeIcon className="img-carro" icon={faCartPlus}/></Link>
+            <Link to="/cart"><FontAwesomeIcon className="img-carro nav-btn-a" icon={faCartPlus}/></Link>
             <div className="container-amount">{`(${cartProducts.length})`}</div>
         </div>
     )

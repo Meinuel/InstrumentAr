@@ -1,4 +1,22 @@
 .item-img {
-    height: 200px;
-    width: 200px;
+    height: 30%;
+    width: 30%;
+    margin-right: 50px;
+}
+
+.data-product-container {
+    margin-left: 50px;
+}
+
+.btn-cart {
+    background-color: rgb(38, 141, 204);
+    color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 15px;
+    width: 20vw;
+    height: 35px;
+    &:hover {
+        background-color: rgb(55, 165, 233);
+    }
 }

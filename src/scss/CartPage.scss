@@ -1,7 +1,20 @@
-.container-cart-page {
-    height: 100vh;
+%cart-flex {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+}
+
+.cart-page-container {
+    @extend %cart-flex;
+    height: 100vh;
+}
+
+.cart-products-container {
+    @extend %cart-flex;
+    height: 50vh;
+    flex-direction: column;
+}
+
+.btn-margin {
+    margin: 15px;
 }

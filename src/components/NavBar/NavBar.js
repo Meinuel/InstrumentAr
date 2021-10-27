@@ -1,37 +1,27 @@
-import { useEffect, useState } from 'react'
+import { useContext } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import '../../css/style.css'
 import {Link} from 'react-router-dom'
 import CartWidget from './CartWidget'
+import { NavBarContext } from '../../context/NavBarContext'
+import NavBrands from './NavBrands'
+import NavCategories from './NavCategories'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 
-export default function MyNavBar () {
-    const [isScroll,setNavStyle] = useState(false)
+export default function MyNavBar (props) {
 
-    useEffect(() => {
-        window.addEventListener("scroll",handleScroll)
-    },[])
-
-    const handleScroll = () => {
-        if (window.scrollY > 20) {
-            setNavStyle(true);
-        } else {
-            setNavStyle(false);
-        }
-    }
+    const {isActive,setNav,activeCategorie} = useContext(NavBarContext) 
+    const {isHome} = props
     return (          
         <header>
-            <nav className={isScroll ? 'nav-scrolled' : 'nav-container'}>
-                <Link to='/'><h4>InstrumentAr</h4></Link>
-                <div className="nav-pages-container">
-                    <ul className="nav-pages">
-                        <li><Link to={`/product/GuitarrasElectricasGibson`}>Guitars</Link></li>
-                        <li><Link to={`/product/BateriaMaped`}>Drums</Link></li>
-                        <li><Link to={`/product/BajoFender`}>Bass</Link></li>
-                        <li><Link to={`/product/Saxo`}>Sax</Link></li>
-                    </ul>
-                    <CartWidget/>
-                </div>
-            </nav> 
+                <nav className={isActive ? activeCategorie.navStyle : 'nav-container'}>
+                    {isActive ? <button onClick={() => setNav(false)} className="nav-btn-a"><FontAwesomeIcon icon={faArrowLeft}/></button> : <Link to='/' className="nav-btn-a"><h4>InstrumentAr</h4></Link>}
+                    <div className="nav-pages-container"> 
+                        {isActive ? <NavBrands isHome={isHome}/> : <NavCategories/>}
+                        <CartWidget/>
+                    </div>
+                </nav> 
         </header>  
     );
 }

@@ -7,7 +7,7 @@ export default function HomePage(){
 
     return(
             <div className="home">
-                <MyNavBar/>
+                <MyNavBar isHome={true}/>
                 <CategoriesListContainer/>
                 <CarouselContainer/>
                 

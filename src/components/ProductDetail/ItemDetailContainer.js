@@ -9,20 +9,18 @@ export default function ItemDetailContainer(props){
     const {productId,brandTitle} = props;
 
     async function getProduct(){
-        console.log(productId)
-        console.log(brandTitle)
         const productDoc = doc(db, brandTitle,productId)
         const productSnapshot = await getDoc(productDoc)
-        console.log(productSnapshot.data())
         setProductData(productSnapshot.data())
     }
-
 
     useEffect(() => {
         getProduct()
     },[])
 
     return(
-        <ItemDetail productData={productData}/>
+        <div className="d-flex justify-content-center align-items-center item-detail-container">
+            <ItemDetail productData={productData}/>
+        </div>
     )
 }

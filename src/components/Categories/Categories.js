@@ -3,15 +3,15 @@ import CategorieBrandsContainer from './CategorieBrandsContainer'
 
 export default function Categories(props) {
 
-    const { categorieTitle, style, img, brands } = props
+    const {categorie} = props
     
     return (
-        <div className={style}>
+        <div className={categorie.style}>
             <div className="animate__animated animate__fadeInUp">
-                <h3>{categorieTitle}</h3>
-            <img className="img-opacity" src={img} alt="img" />
+                <h3>{categorie.categorieTitle}</h3>
+            <img className="img-opacity" src={categorie.img} alt="img" />
             </div>
-            <CategorieBrandsContainer brands={brands}/>
+            <CategorieBrandsContainer categorie={categorie}/>
         </div>
     )
 }

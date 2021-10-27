@@ -23,7 +23,7 @@ export default function ItemList(props) {
         getProducts(db)
     }, [brandTitle]);
 
-    return ( <div className = "row" > {
+    return ( <div className = "row item-list" > {
             products.length === 0 ? <Spinner className = "m-auto" animation = "grow"/> : products.map(
                 ({ title, img, id }) => ( 
                 <div className = "col-md-4" > 

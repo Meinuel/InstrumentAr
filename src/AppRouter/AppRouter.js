@@ -4,6 +4,7 @@ import NotFoundPage from "../pages/NotFoundPage";
 import HomePage from "../pages/HomePage";
 import ProductDetailPage from "../pages/ProductDetailPage";
 import CartPage from "../pages/CartPage"
+
 export default function AppRouter () {
     return (
         <BrowserRouter>

@@ -3,7 +3,7 @@ import '../../css/style.css'
 
 export default function CarouselContainer(){
     return(
-        <Carousel>
+        <Carousel variant="dark">
             <Carousel.Item interval={4000} className="carousel-container">
                 <Carousel.Caption>
                 <h3>Banner I</h3>
