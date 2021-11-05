@@ -8,6 +8,7 @@ import NavBrands from './NavBrands'
 import NavCategories from './NavCategories'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
+import LoginWidget from './LoginWidget'
 
 export default function MyNavBar (props) {
 
@@ -20,6 +21,7 @@ export default function MyNavBar (props) {
                     <div className="nav-pages-container"> 
                         {isActive ? <NavBrands isHome={isHome}/> : <NavCategories/>}
                         <CartWidget/>
+                        <LoginWidget/>
                     </div>
                 </nav> 
         </header>  
