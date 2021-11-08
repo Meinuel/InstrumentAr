@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons"
 export default function OrderResponse(props){
     const {orderRsp} = props
-    console.log(orderRsp)
+
     return(
         <div>
             {orderRsp.id ? 

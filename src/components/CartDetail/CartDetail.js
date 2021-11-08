@@ -8,29 +8,38 @@ import db from '../../firebase.js'
 import '../../css/style.css'
 import OrderResponse from '../OrderResponse/OrderResponse.js'
 import Spinner from 'react-bootstrap/Spinner'
+import { UserContext } from '../../context/UserContext'
+import { signInWithRedirect } from '@firebase/auth'
 
 
 export default function CartDetail(){
     
     const {cartProducts,clearCartProducts,removeCartProduct} = useContext(CartContext)
+    const {user,SignInWithFirebase} = useContext(UserContext)
     const [orderRsp,setOrderRsp] = useState()
     const [isOrdered, setIsOrdered] = useState(false)
 
     const calculateTotal = products => products.reduce((prev, acc) => prev + acc.price*acc.quantity, 0)
-    const newOrder = {
-        buyer: {
-            name:'Manuel Gonzalez',
-            phone:'1553154948',
-            mail:'sieteoctavos78@gmail.com'
-        },
-        item: cartProducts,
-        total: calculateTotal(cartProducts)
-    }
+
     const generateOrder = async () => {
+        const newOrder = {
+            buyer: {
+                name : user.displayName,
+                mail:  user.email
+            },
+            item: cartProducts,
+            total: calculateTotal(cartProducts)
+        }
         setIsOrdered(true)
         const orderFirebase = collection(db, 'ordenes')
-        const order = await addDoc(orderFirebase,newOrder)
-        order && setOrderRsp(order)
+       // const order = await addDoc(orderFirebase,newOrder)
+        addDoc(orderFirebase,newOrder).then( order => {
+            clearCartProducts()
+            order && setOrderRsp(order)
+        }).catch(err => {
+            console.log(err)
+        })
+
     }
 
     return(
@@ -47,7 +56,7 @@ export default function CartDetail(){
                             <h4>{`${calculateTotal(cartProducts)} $`}</h4>
                             <div>
                                 <button className="btn-cart btn-margin" onClick={clearCartProducts}>Limpiar canasta</button>
-                                <button className="btn-cart btn-margin" onClick={generateOrder}>Generar Orden</button>
+                                <button className="btn-cart btn-margin" onClick={user ? generateOrder : SignInWithFirebase}>Generar Orden</button>
                             </div>
                     </div> 
                 :   <div>

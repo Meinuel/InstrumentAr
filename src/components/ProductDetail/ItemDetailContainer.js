@@ -19,7 +19,7 @@ export default function ItemDetailContainer(props){
     },[])
 
     return(
-        <div className="d-flex justify-content-center align-items-center item-detail-container">
+        <div className="d-flex justify-content-center align-items-center">
             <ItemDetail productData={productData}/>
         </div>
     )

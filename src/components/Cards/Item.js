@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEye } from '@fortawesome/free-solid-svg-icons';
 import '../../css/style.css';
 
 export default function Item (props) {
@@ -12,7 +14,7 @@ export default function Item (props) {
         </div>
         <div className="d-flex flex-column justify-content-between align-items-centers card-body text-dark">
             <h5>{title}</h5>
-            <Link to={`/productDetail/${id}/${brandTitle}`}><button variant="dark">Ver Producto</button></Link>   
+            <Link className="card-link" to={`/productDetail/${id}/${brandTitle}`}>Ver Producto <FontAwesomeIcon icon={faEye}/></Link>   
         </div>
     </div>
     )

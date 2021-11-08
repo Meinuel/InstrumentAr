@@ -7,8 +7,7 @@
     align-items: center;
     padding-inline: 20px;
     border-top: 2px solid rgb(64, 69, 72);
-    // border-radius: 0px 0px 5px 5px;
-    position: fixed;
+    // position: fixed;
     box-shadow: 0 10px 10px -9px black;
     z-index: 5;
     color: white;
@@ -110,5 +109,15 @@
     border-radius: 5px;
 }
 
+.cart-login-container {
+    display: flex;
+    justify-content: space-between;
+    width: 10vw;
+}
 
-/* The element to apply the animation to */
+.login-btn {
+    background-color: transparent;
+    text-shadow: 1px 1px 2px black;
+    color: white;
+    border: none;
+}

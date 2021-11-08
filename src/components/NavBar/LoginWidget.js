@@ -8,7 +8,7 @@ export default function LoginWidget (){
     const {user,SignInWithFirebase} = useContext(UserContext) 
     return(
         <div>
-            {user ? <Link to={'/userprofile'}><FontAwesomeIcon className="img-carro nav-btn-a" icon={faUser}/></Link> : <button onClick={SignInWithFirebase}>Login</button>}
+            {user ? <Link to={'/userprofile'}><FontAwesomeIcon className="img-carro nav-btn-a" icon={faUser}/></Link> : <button className="login-btn" onClick={SignInWithFirebase}>Login</button>}
         </div>
     )
 }

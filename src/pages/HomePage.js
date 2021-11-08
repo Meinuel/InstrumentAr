@@ -6,11 +6,10 @@ import CarouselContainer from '../components/Carousel/CarouselContainer'
 export default function HomePage(){
 
     return(
-            <div className="home">
+            <div>
                 <MyNavBar isHome={true}/>
                 <CategoriesListContainer/>
                 <CarouselContainer/>
-                
             </div>
     )
 }

@@ -20,8 +20,10 @@ export default function MyNavBar (props) {
                     {isActive ? <button onClick={() => setNav(false)} className="nav-btn-a"><FontAwesomeIcon icon={faArrowLeft}/></button> : <Link to='/' className="nav-btn-a"><h4>InstrumentAr</h4></Link>}
                     <div className="nav-pages-container"> 
                         {isActive ? <NavBrands isHome={isHome}/> : <NavCategories/>}
-                        <CartWidget/>
-                        <LoginWidget/>
+                        <div className={"cart-login-container d-flex "}>
+                            <CartWidget/>
+                            <LoginWidget/>
+                        </div>
                     </div>
                 </nav> 
         </header>  

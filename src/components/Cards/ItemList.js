@@ -11,11 +11,9 @@ export default function ItemList(props) {
     const [products, setProducts] = useState([])
 
     async function getProducts(db) {
-        console.log(brandTitle)
         const productsCol = collection(db, brandTitle)
         const productsSnapshot = await getDocs(productsCol)
         const products = productsSnapshot.docs.map(doc => doc.data())
-        console.log(products)
         setProducts(products)
     }
 

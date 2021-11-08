@@ -20,13 +20,12 @@ export default function ItemDetail(props){
     }
 
     const addToCart = () => {
-        console.log(productData)
         addCartProduct({id:productData.id,name:productData.title, price:productData.price, quantity:quantity})
         setAdd(!isAdded)
     }
 
     return(
-        <div className="d-flex justify-content-center">
+        <div className="d-flex justify-content-center item-detail">
             <img src={productData.img} alt="product img" className="item-img"/>
             <div className="d-flex flex-column justify-content-evenly align-items-center data-product-container">
                 <div>{productData.title}</div>

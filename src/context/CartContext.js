@@ -20,7 +20,6 @@ const CartProvider = ({children})=>{
             }
             !isDuplicate && setCartProducts([...cartProducts,product])
             console.log(`El producto ${product.name} ya se encuentra en el carrito`)
-            console.log(cartProducts)
         }
     }
 

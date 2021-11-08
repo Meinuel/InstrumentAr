@@ -44,7 +44,6 @@ const NavBarProvider = ({children}) => {
         categorie.brands.forEach(brand => {
             if(brand.brandTitle === brandTitle){
                 brand['isActive'] = true
-                console.log(brand.brandTitle,brand['isActive'])
                 setBrandLogo(brand.img)
             }else{
                 brand['isActive'] = false

@@ -7,7 +7,6 @@ export default function ProductPage(){
     return (
         <div>
             <MyNavBar isHome={false}/>
-            {/* <BrandContainer/> */}
             <ItemListContainer brandTitle={brandTitle}/>
         </div>
     )
