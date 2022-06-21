@@ -1,0 +1,19 @@
+.card-img-top {
+    overflow: hidden;
+}
+
+.card:hover {
+    border: 1px solid black;
+}
+
+.card {
+    margin-bottom: 10px;
+    height: 400px;
+    width: 75%;
+    background-color: rebeccapurple;
+}
+
+.card-link {
+    text-decoration: none;
+    color: rgb(117, 116, 116);
+}

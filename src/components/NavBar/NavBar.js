@@ -1,31 +1,31 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Navbar from 'react-bootstrap/Navbar';
-import './NavBar.css'
-import Form from 'react-bootstrap/Form';
-import FormControl from 'react-bootstrap/FormControl';
-import Button from 'react-bootstrap/Button';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-const MyNavBar = () => {
-    return (
-        <Navbar bg="dark" variant="dark" className="nav-flex">
-            <Navbar.Brand href="#home">InstrumentAr</Navbar.Brand>
-            <Form className="d-flex">
-                <NavDropdown title="All" id="navbarScrollingDropdown">
-                    <NavDropdown.Item href="#Guitars">Guitars</NavDropdown.Item>
-                    <NavDropdown.Item href="#Drums">Drums</NavDropdown.Item>
-                    <NavDropdown.Item href="#Brass">Brass</NavDropdown.Item>    
-                </NavDropdown>
-                    <FormControl
-                        type="search"
-                        placeholder="Search"
-                        className="inputSearch"
-                        aria-label="Search"
-                    />
-                    <Button variant="warning"><img className="img-lupa" src="https://image.flaticon.com/icons/png/512/64/64673.png" alt="lupa" /></Button>
-            </Form>
-            <a href="https://www.mercadolibre.com/"><img className="img-carro" src="https://latgchallenge.com/assets/images/logos_slider/cart.png" alt="dazos"/></a>
-        </Navbar>
+import { useContext } from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import '../../css/style.css'
+import {Link} from 'react-router-dom'
+import CartWidget from './CartWidget'
+import { NavBarContext } from '../../context/NavBarContext'
+import NavBrands from './NavBrands'
+import NavCategories from './NavCategories'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
+import LoginWidget from './LoginWidget'
+
+export default function MyNavBar (props) {
+
+    const {isActive,setNav,activeCategorie} = useContext(NavBarContext) 
+    const {isHome} = props
+    return (          
+        <header>
+                <nav className={isActive ? activeCategorie.navStyle : 'nav-container'}>
+                    {isActive ? <button onClick={() => setNav(false)} className="nav-btn-a"><FontAwesomeIcon icon={faArrowLeft}/></button> : <Link to='/' className="nav-btn-a"><h4>InstrumentAr</h4></Link>}
+                    <div className="nav-pages-container"> 
+                        {isActive ? <NavBrands isHome={isHome}/> : <NavCategories/>}
+                        <div className={"cart-login-container d-flex "}>
+                            <CartWidget/>
+                            <LoginWidget/>
+                        </div>
+                    </div>
+                </nav> 
+        </header>  
     );
 }
-
-export default MyNavBar;

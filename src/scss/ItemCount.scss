@@ -1,0 +1,18 @@
+.item-count-container {
+    width: 25vw;
+    margin-top: 15px;
+}
+
+.counter {
+    background-color: transparent;
+    color: rgb(34, 120, 174);
+    border: 2px solid rgb(38, 141, 204);
+    font-weight: 700;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    &:hover {
+        background-color: rgb(38, 141, 204);
+        color: white;
+    }
+}

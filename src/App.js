@@ -1,13 +1,18 @@
-import MyNavBar from './components/NavBar/NavBar.js';
-import './App.css';
+import AppRouter from './AppRouter/AppRouter.js';
+import { CartProvider } from './context/CartContext.js';
+import { NavBarProvider } from './context/NavBarContext.js';
+import { UserProvider } from './context/UserContext.js';
+import './css/style.css'
 
 function App() {
     return (
-        <div className="App">
-        <header>
-            <MyNavBar/>
-        </header>
-        </div>
+        <CartProvider>
+            <NavBarProvider>
+                <UserProvider>
+                    <AppRouter/>
+                </UserProvider>
+            </NavBarProvider>
+        </CartProvider>
     );
 }
 

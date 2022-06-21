@@ -1,0 +1,329 @@
+* {
+  list-style: none;
+}
+
+.nav-container-saxes, .nav-container-basses, .nav-container-drums, .nav-container-guitars, .nav-container, .nav-scrolled {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  justify-content: space-between;
+  transition: all 0.3s ease-in-out;
+  align-items: center;
+  padding-inline: 20px;
+  border-top: 2px solid #404548;
+  box-shadow: 0 10px 10px -9px black;
+  z-index: 5;
+  color: white;
+}
+.nav-container-saxes .nav-btn-a, .nav-container-basses .nav-btn-a, .nav-container-drums .nav-btn-a, .nav-container-guitars .nav-btn-a, .nav-container .nav-btn-a, .nav-scrolled .nav-btn-a {
+  text-shadow: 1px 1px 2px black;
+  font-weight: 600;
+  color: white;
+  border: none;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.nav-container .img-carro, .nav-scrolled .img-carro {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  margin-top: 2px;
+}
+
+.nav-scrolled {
+  background-color: #2aa9f8;
+}
+.nav-container {
+  background-color: #268dcc;
+}
+.nav-container-guitars {
+  background-color: #ff5d5d;
+}
+@keyframes backgroundColorAnimation {
+  from {
+    background-color: #268dcc;
+  }
+  to {
+    background-color: #ff5d5d;
+  }
+}
+
+.nav-container-drums {
+  background-color: #ca87ca;
+}
+@keyframes backgroundColorAnimation {
+  from {
+    background-color: #268dcc;
+  }
+  to {
+    background-color: #ca87ca;
+  }
+}
+
+.nav-container-basses {
+  background-color: #d6b468;
+}
+@keyframes backgroundColorAnimation {
+  from {
+    background-color: #268dcc;
+  }
+  to {
+    background-color: #d6b468;
+  }
+}
+
+.nav-container-saxes {
+  background-color: #02c29f;
+}
+@keyframes backgroundColorAnimation {
+  from {
+    background-color: #268dcc;
+  }
+  to {
+    background-color: #02c29f;
+  }
+}
+
+.nav-pages-container {
+  width: 60%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-pages {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.btn-nav {
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+
+.active-brand-container {
+  background-color: #797979;
+  border-radius: 5px;
+}
+
+.cart-login-container {
+  display: flex;
+  justify-content: space-between;
+  width: 10vw;
+}
+
+.login-btn {
+  background-color: transparent;
+  text-shadow: 1px 1px 2px black;
+  color: white;
+  border: none;
+}
+
+.container-brasses, .container-drums, .container-basses, .container-guitars {
+  display: flex;
+  justify-content: space-between;
+  opacity: 1;
+  width: 25%;
+  transition: all 0.2s ease-in-out;
+  overflow: hidden;
+  border-radius: 5px;
+  margin-inline: 5px;
+  margin-block: 40px;
+  box-shadow: 1px 1px 1px 1px #404548;
+}
+.container-brasses h3, .container-drums h3, .container-basses h3, .container-guitars h3 {
+  text-shadow: 1px 1px 2px black;
+  color: #f7f7f7;
+  margin-left: 20px;
+}
+.container-brasses .img-opacity, .container-drums .img-opacity, .container-basses .img-opacity, .container-guitars .img-opacity {
+  opacity: 0.9;
+}
+.container-brasses:hover, .container-drums:hover, .container-basses:hover, .container-guitars:hover {
+  width: 140%;
+}
+
+.container-brasses a, .container-drums a, .container-basses a, .container-guitars a {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-brasses a .img-resize, .container-drums a .img-resize, .container-basses a .img-resize, .container-guitars a .img-resize {
+  height: 100px;
+  width: 100px;
+}
+
+.container-guitars {
+  background-color: #ff5d5d;
+}
+.container-guitars img {
+  width: 470px;
+  height: 390px;
+}
+.container-guitars a:hover {
+  background-color: #fa4242;
+}
+
+.container-basses {
+  background-color: #d6b468;
+}
+.container-basses img {
+  height: 390px;
+}
+.container-basses a:hover {
+  background-color: #c2a463;
+}
+
+.container-drums {
+  background-color: #ca87ca;
+}
+.container-drums img {
+  height: 390px;
+}
+.container-drums a:hover {
+  background-color: #bf86bf;
+}
+
+.container-brasses {
+  background-color: #02c29f;
+}
+.container-brasses img {
+  transform: scaleX(-1);
+  height: 390px;
+  width: 390px;
+}
+.container-brasses a img {
+  transform: scaleX(1);
+}
+.container-brasses a:hover {
+  background-color: #03a084;
+}
+
+.container-brands {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.categorie-container {
+  width: 80%;
+  border: 1px solid black;
+  margin: auto;
+}
+
+.item-img {
+  height: 30%;
+  width: 30%;
+  margin-right: 50px;
+}
+
+.data-product-container {
+  margin-left: 50px;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.btn-cart {
+  background-color: #268dcc;
+  color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-top: 15px;
+  width: 20vw;
+  height: 35px;
+}
+.btn-cart:hover {
+  background-color: #37a5e9;
+}
+
+.item-detail {
+  margin-top: 15vh;
+}
+
+.card-img-top {
+  overflow: hidden;
+}
+
+.card:hover {
+  border: 1px solid black;
+}
+
+.card {
+  margin-bottom: 10px;
+  height: 400px;
+  width: 75%;
+  background-color: rebeccapurple;
+}
+
+.card-link {
+  text-decoration: none;
+  color: #757474;
+}
+
+.item-list-container {
+  margin-top: 30px;
+}
+
+.brand-logo {
+  height: 10%;
+  width: 10%;
+}
+
+.item-count-container {
+  width: 25vw;
+  margin-top: 15px;
+}
+
+.counter {
+  background-color: transparent;
+  color: #2278ae;
+  border: 2px solid #268dcc;
+  font-weight: 700;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+}
+.counter:hover {
+  background-color: #268dcc;
+  color: white;
+}
+
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  height: 150px;
+}
+
+.cart-products-container, .cart-page-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.cart-page-container {
+  height: 100vh;
+}
+
+.cart-products-container {
+  height: 50vh;
+  flex-direction: column;
+}
+
+.btn-margin {
+  margin: 15px;
+}
+
+.order-list {
+  margin-bottom: 10px;
+  border: 1px solid green;
+}
+
+/*# sourceMappingURL=style.css.map */
